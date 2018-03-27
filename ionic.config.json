@@ -1,0 +1,8 @@
+{
+  "name": "dream_team_ionic",
+  "app_id": "1223d351",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
