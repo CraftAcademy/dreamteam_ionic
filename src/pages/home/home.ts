@@ -7,6 +7,12 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  obj = {
+    "title": "My amazing article",
+    "content": "Lorem ipsum dolor amet readymade gluten-free shoreditch..",
+    "image": "../assets/imgs/article-image-mock.jpg"
+  }
+
   constructor(public navCtrl: NavController) {
 
   }

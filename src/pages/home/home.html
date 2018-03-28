@@ -15,12 +15,13 @@
   </p>
 
   <div class="articles">
+    
     <div class="image">
-      <img src="assets/imgs/article-image-mock.jpg">
+      <img src="{{ obj.image }}">
     </div>
     <div class="content">
-      <h3>Article Title</h3>
-      <p>Lorem ipsum dolor amet readymade gluten-free shoreditch..</p>
+      <h3>{{ obj.title }}</h3>
+      <p>{{ obj.content }}</p>
       <button ion-button color="secondary">Continue reading</button>    
     </div>
 
