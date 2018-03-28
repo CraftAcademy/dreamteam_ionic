@@ -14,28 +14,21 @@
     update any existing page or create new pages.
   </p>
 
-  <div class="articles">
-    
-    <div class="image">
-      <img src="{{ obj.image }}">
+  <ng-container *ngFor="let article of articles" class="container">
+    <div class="article">  
+      <div class="image">
+        <!-- Can't seem to find the image-path, 
+        in the terminal it's article.image.attachment.blob.filename -->
+        <img src="{{ article.attributes.image.name }}.jpg">
+      </div>
+      <div class="content">
+        <h3>{{ article.attributes.title }}</h3>
+        <p>{{ article.attributes.body }}</p>
+        <!-- This works, its the path to the category-name, buts it not ok -->
+        <p><i>{{ article.attributes.categories[0].name }}</i></p>
+        <button ion-button color="secondary">Continue reading</button>    
+      </div>
     </div>
-    <div class="content">
-      <h3>{{ obj.title }}</h3>
-      <p>{{ obj.content }}</p>
-      <p><i>{{ obj.categories }}</i></p>
-      <button ion-button color="secondary">Continue reading</button>    
-    </div>
-
-    <div class="image">
-      <img src="assets/imgs/article-image-mock-2.jpg">
-    </div>
-    <div class="content">
-      <h3>Second Article Title</h3>
-      <p>Lorem ipsum dolor amet readymade gluten-free shoreditch..</p>
-      <p><i>International News, Fashion</i></p>
-      <button ion-button color="secondary">Continue reading</button>    
-    </div>
-
-  </div>
+  </ng-container>
 
 </ion-content>
