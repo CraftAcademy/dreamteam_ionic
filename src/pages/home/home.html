@@ -25,7 +25,9 @@
         <h3>{{ article.attributes.title }}</h3>
         <p>{{ article.attributes.body }}</p>
         <!-- This works, its the path to the category-name, buts it not ok -->
-        <p><i>{{ article.attributes.categories[0].name }}</i></p>
+        <div *ngFor="let category of article.attributes.categories" class="categories">
+          <p><i>{{ category.name }}</i></p>
+        </div>
         <button ion-button color="secondary">Continue reading</button>    
       </div>
     </div>

@@ -24,7 +24,6 @@ export class HomePage {
   private apiUrl: string = 'http://localhost:3000/api/v0/articles';
   // private apiUrl: string = 'https://dreamteam-publications.herokuapp.com/api/v0/articles';
   articles: any[];
-  categories: any[];
 
   constructor(private http: Http, navCtrl: NavController) {
     // Get some articles from API and store them in data
