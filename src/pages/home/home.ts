@@ -14,12 +14,12 @@ import 'rxjs/add/operator/map';
 
 export class HomePage {
 
-  obj = {
-    title: "My amazing article",
-    content: "Lorem ipsum dolor amet readymade gluten-free shoreditch..",
-    image: "../assets/imgs/article-image-mock.jpg",
-    categories: "Fashion, Tech, Sports"
-  };
+  // obj = {
+  //   title: "My amazing article",
+  //   content: "Lorem ipsum dolor amet readymade gluten-free shoreditch..",
+  //   image: "../assets/imgs/article-image-mock.jpg",
+  //   categories: "Fashion, Tech, Sports"
+  // };
 
   private apiUrl: string = 'http://localhost:3000/api/v0/articles';
   // private apiUrl: string = 'https://dreamteam-publications.herokuapp.com/api/v0/articles';

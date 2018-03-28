@@ -19,7 +19,7 @@
       <div class="image">
         <!-- Can't seem to find the image-path, 
         in the terminal it's article.image.attachment.blob.filename -->
-        <img src="{{ article.attributes.image.name }}.jpg">
+        <img src="{{ article.attributes.image }}">
       </div>
       <div class="content">
         <h3>{{ article.attributes.title }}</h3>
@@ -28,7 +28,7 @@
         <div *ngFor="let category of article.attributes.categories" class="categories">
           <p><i>{{ category.name }}</i></p>
         </div>
-        <button ion-button color="secondary">Continue reading</button>    
+        <button ion-button color="secondary" href="articles/article.attributes.id">Continue reading</button>    
       </div>
     </div>
   </ng-container>
