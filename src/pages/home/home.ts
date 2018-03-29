@@ -6,28 +6,17 @@ import { resolvePtr } from 'dns';
 import 'rxjs/add/operator/map';
 //import { HttpHeaders } from '@angular/common/http';
 
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 
 export class HomePage {
-
-  // obj = {
-  //   title: "My amazing article",
-  //   content: "Lorem ipsum dolor amet readymade gluten-free shoreditch..",
-  //   image: "../assets/imgs/article-image-mock.jpg",
-  //   categories: "Fashion, Tech, Sports"
-  // };
-
-  private apiUrl: string = 'http://localhost:3000/api/v0/articles';
-  // private apiUrl: string = 'https://dreamteam-publications.herokuapp.com/api/v0/articles';
+  // private apiUrl: string = 'http://localhost:3000/api/v1/articles';
+  private apiUrl: string = 'https://dreamteam-publications.herokuapp.com/api/v1/articles';
   articles: any[];
 
-  constructor(private http: Http, navCtrl: NavController) {
-    // Get some articles from API and store them in data
-  
+  constructor(private http: Http, navCtrl: NavController) { 
     this.http.get(this.apiUrl)
              .map((response: Response) => response.json())
              .subscribe(articles => {
@@ -35,5 +24,4 @@ export class HomePage {
                 this.articles = articles.data;
              });
   }
-
 }
